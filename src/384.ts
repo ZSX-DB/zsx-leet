@@ -22,6 +22,4 @@ class Solution {
 
 }
 
-
-const solution = new Solution([1, 2, 3, 4, 5])
-console.log(solution.shuffle())
+export default Solution
