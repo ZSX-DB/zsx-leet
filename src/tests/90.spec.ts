@@ -1,17 +1,15 @@
-import subsets from "../78";
+import subsetsWithDup from "../90";
 import {detectArrayList} from "../utils/detect";
 
-test("78", () => {
+test("90", () => {
     expect(
         detectArrayList<number>(
-            subsets([1, 2, 3]),
-            [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+            subsetsWithDup([1, 2, 2]), [[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]
         )
     ).toBeTruthy()
     expect(
         detectArrayList<number>(
-            subsets([0]),
-            [[], [0]]
+            subsetsWithDup([0]), [[], [0]]
         )
     ).toBeTruthy()
 })
