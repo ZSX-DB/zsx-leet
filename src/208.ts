@@ -1,50 +1,44 @@
 class Trie {
-    private readonly root: object
+    private readonly root: TrieRoot
 
     constructor() {
         this.root = {}
     }
 
     insert(word: string): void {
-        let curr = this.root
+        let temp: TrieRoot = this.root
         for (const ch of word) {
-            if (curr[ch] === undefined) {
-                curr[ch] = {}
+            if (temp[ch] === undefined) {
+                temp[ch] = {}
             }
-            curr = curr[ch]
+            temp = temp[ch]
         }
-        curr['end'] = true
+        temp.end = {}
     }
 
     search(word: string): boolean {
-        let curr = this.root
+        let temp: TrieRoot = this.root
         for (const ch of word) {
-            if (curr[ch] === undefined) {
+            if (temp[ch] === undefined) {
                 return false
             } else {
-                curr = curr[ch]
+                temp = temp[ch]
             }
         }
-        return curr.hasOwnProperty('end')
+        return temp.hasOwnProperty('end')
     }
 
     startsWith(prefix: string): boolean {
-        let curr = this.root
+        let temp: TrieRoot = this.root
         for (const ch of prefix) {
-            if (curr[ch] === undefined) {
+            if (temp[ch] === undefined) {
                 return false
             } else {
-                curr = curr[ch]
+                temp = temp[ch]
             }
         }
         return true
     }
 }
 
-const trie = new Trie()
-trie.insert('apple')
-console.log(trie.search('apple'))
-console.log(trie.search('app'))
-console.log(trie.startsWith('app'))
-trie.insert('app')
-console.log(trie.search('app'))
+export default Trie

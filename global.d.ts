@@ -11,3 +11,7 @@ declare class TreeNode {
     right: TreeNode | null;
     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null);
 }
+
+declare type TrieRoot = {
+    [key in string]: TrieRoot
+}
