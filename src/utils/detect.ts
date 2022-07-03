@@ -19,6 +19,26 @@ const detectArrayList = <T>(arrayItems1: ArrayItems<T>, arrayItems2: ArrayItems<
     return true
 }
 
+const detectStringList = (stringItems1: string[], stringItems2: string[]) => {
+    if (stringItems1.length !== stringItems2.length) {
+        return false
+    }
+    const items = stringItems1.map(stringItem => ({
+        value: stringItem,
+        match: false
+    }))
+    for (const stringItem of stringItems2) {
+        const idx: number = items.findIndex(item => item.value === stringItem && item.match === false)
+        if (idx === -1) {
+            return false
+        } else {
+            items[idx].match = true
+        }
+    }
+    return true
+}
+
 export {
-    detectArrayList
+    detectArrayList,
+    detectStringList
 }
