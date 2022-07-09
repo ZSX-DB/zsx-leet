@@ -13,5 +13,5 @@ declare class TreeNode {
 }
 
 declare type TrieRoot = {
-    [key in string]: TrieRoot
+    [key in string]: TrieRoot;
 }
