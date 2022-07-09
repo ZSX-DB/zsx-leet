@@ -1,7 +1,12 @@
-import { toBinaryTree, toLinkedList } from "../utils/convert";
+import {toBinaryTree, toLinkedList} from "../utils/convert";
 
 test("toBinaryTree", () => {
-    expect(toBinaryTree(([1, null, 2, 3]))).toEqual({
+    expect(toBinaryTree([1])).toEqual({
+        val: 1,
+        left: null,
+        right: null
+    })
+    expect(toBinaryTree([1, null, 2, 3])).toEqual({
         val: 1,
         left: null,
         right: {
@@ -14,7 +19,7 @@ test("toBinaryTree", () => {
             right: null
         }
     })
-    expect(toBinaryTree(([1, 2, 3]))).toEqual({
+    expect(toBinaryTree([1, 2, 3])).toEqual({
         val: 1,
         left: {
             val: 2,
@@ -27,7 +32,7 @@ test("toBinaryTree", () => {
             right: null
         }
     })
-    expect(toBinaryTree(([1, null, 2, null, 3]))).toEqual({
+    expect(toBinaryTree([1, null, 2, null, 3])).toEqual({
         val: 1,
         left: null,
         right: {
@@ -69,6 +74,6 @@ test("toBinaryTree", () => {
 
 test("toLinkedList", () => {
     expect(toLinkedList([])).toEqual(null)
-    expect(toLinkedList([3, 2, 6])).toEqual({ val: 3, next: { val: 2, next: { val: 6, next: null } } })
-    expect(toLinkedList([3, 1, 2, 4])).toEqual({ val: 3, next: { val: 1, next: { val: 2, next: { val: 4, next: null } } } })
+    expect(toLinkedList([3, 2, 6])).toEqual({val: 3, next: {val: 2, next: {val: 6, next: null}}})
+    expect(toLinkedList([3, 1, 2, 4])).toEqual({val: 3, next: {val: 1, next: {val: 2, next: {val: 4, next: null}}}})
 })

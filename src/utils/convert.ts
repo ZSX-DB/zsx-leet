@@ -35,6 +35,12 @@ const hierarchyTrees = (trees: Trees): Trees[] => {
 const toBinaryTree = (trees: Trees): TreeNode | null => {
     if (trees.length === 0) {
         return null
+    } else if (trees.length === 1) {
+        return {
+            val: trees[0],
+            left: null,
+            right: null
+        }
     }
     // 填充缺失的 null 节点
     const wholeTrees: Trees = fillTrees(trees)
@@ -46,7 +52,7 @@ const toBinaryTree = (trees: Trees): TreeNode | null => {
     for (let i = 0; i < hierarchies.length; i++) {
         const hierarchy: Trees = hierarchies[i]
         if (i === 0) {
-            container.push(hierarchy.map(item => item === null ? null : { val: item, left: null, right: null }))
+            container.push(hierarchy.map(item => item === null ? null : {val: item, left: null, right: null}))
         } else {
             container.push(hierarchy.map((item, index) => item === null ? null : {
                 val: item,
@@ -63,12 +69,12 @@ const toLinkedList = (list: number[]): ListNode | null => {
     if (len === 0) {
         return null
     }
-    const initListNode: ListNode = { val: -1, next: null }
-    const result: ListNode = { ...initListNode }
+    const initListNode: ListNode = {val: -1, next: null}
+    const result: ListNode = {...initListNode}
     let temp: ListNode | null = result
     for (let i = 0; i < list.length; i++) {
         temp.val = list[i]
-        temp.next = (i !== len - 1) ? { ...initListNode } : null
+        temp.next = (i !== len - 1) ? {...initListNode} : null
         temp = temp.next
     }
     return result
