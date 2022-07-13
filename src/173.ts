@@ -25,7 +25,7 @@
 
 class BSTIterator {
     private readonly stack: TreeNode[] = []
-    private curr: TreeNode
+    private curr: TreeNode | null = null
 
     constructor(root: TreeNode | null) {
         this.curr = root
