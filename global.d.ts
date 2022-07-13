@@ -14,6 +14,7 @@ declare class TreeNode {
     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null);
 }
 
+
 declare class Node {
     val: number
     children: Node[]
@@ -27,4 +28,19 @@ declare class Node {
 
 declare type TrieRoot = {
     [key in string]: TrieRoot;
+}
+
+
+declare class NestedInteger {
+    constructor(value?: number);
+
+    isInteger(): boolean;
+
+    getInteger(): number | null;
+
+    setInteger(value: number): void;
+
+    add(elem: NestedInteger): void;
+
+    getList(): NestedInteger[];
 }
