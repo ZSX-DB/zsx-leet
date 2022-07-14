@@ -3,14 +3,24 @@ type Tree = number | null
 type Trees = Tree[]
 
 const fillTrees = (trees: Trees): Trees => {
-    const maxPossibleDepth: number = trees.filter(tree => tree !== null).length
-    const wholeTrees: Trees = [...trees]
-    for (let i = 0; i < maxPossibleDepth; i++) {
-        if (wholeTrees[i] === null) {
-            wholeTrees.splice(2 * i + 1, 0, null, null)
+    if (trees.includes(null)) {
+        const maxPossibleDepth: number = trees.filter(tree => tree !== null).length
+        const wholeTrees: Trees = [...trees]
+        for (let i = 0; i < maxPossibleDepth; i++) {
+            if (wholeTrees[i] === null) {
+                wholeTrees.splice(2 * i + 1, 0, null, null)
+            }
         }
+        return wholeTrees
+    } else {
+        let len: number = trees.length
+        let num: number = 1
+        while (len > num) {
+            len -= num
+            num *= 2
+        }
+        return trees.concat(Array(num * 3 - len).fill(null))
     }
-    return wholeTrees
 }
 
 const hierarchyTrees = (trees: Trees): Trees[] => {
@@ -35,12 +45,6 @@ const hierarchyTrees = (trees: Trees): Trees[] => {
 const toBinaryTree = (trees: Trees): TreeNode | null => {
     if (trees.length === 0) {
         return null
-    } else if (trees.length === 1) {
-        return {
-            val: trees[0],
-            left: null,
-            right: null
-        }
     }
     // 填充缺失的 null 节点
     const wholeTrees: Trees = fillTrees(trees)

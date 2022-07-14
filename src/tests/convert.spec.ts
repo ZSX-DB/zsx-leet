@@ -1,6 +1,24 @@
 import {toBinaryTree, toLinkedList} from "../utils/convert";
 
 test("toBinaryTree", () => {
+    expect(toBinaryTree([1, 2])).toEqual({
+        val: 1,
+        left: {
+            val: 2,
+            left: null,
+            right: null
+        },
+        right: null
+    })
+    expect(toBinaryTree([1, null, 2])).toEqual({
+        val: 1,
+        left: null,
+        right: {
+            val: 2,
+            left: null,
+            right: null
+        }
+    })
     expect(toBinaryTree([1])).toEqual({
         val: 1,
         left: null,
