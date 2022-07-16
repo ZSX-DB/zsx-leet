@@ -44,3 +44,6 @@ declare class NestedInteger {
 
     getList(): NestedInteger[];
 }
+
+
+declare type MathSign = '+' | '-' | '*' | '/'
