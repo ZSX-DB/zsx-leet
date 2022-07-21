@@ -2,6 +2,10 @@ class TreeMap<V> extends Map<number, V> {
     // 保证 key 的唯一性
     private readonly keysSet: number[] = []
 
+    constructor() {
+        super()
+    }
+
     private insertKey(key: number): void {
         if (this.keysSet.includes(key)) {
             return
