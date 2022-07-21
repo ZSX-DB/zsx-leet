@@ -21,11 +21,8 @@ class TreeMap<V> extends Map<number, V> {
         }
     }
 
-    forEach(callbackfn: (value: V, key: number, map: Map<number, V>) => void): void {
-        const keysSet = this.keysSet
-        for (let i = 0; i < keysSet.length; i++) {
-            callbackfn(super.get(keysSet[i]) as V, keysSet[i], this)
-        }
+    private clearKeys(): void {
+        this.keysSet.length = 0
     }
 
     set(key: number, value: V): this {
@@ -40,8 +37,32 @@ class TreeMap<V> extends Map<number, V> {
         return super.delete(key)
     }
 
+    forEach(callbackfn: (value: V, key: number, map: Map<number, V>) => void): void {
+        const keysSet = this.keysSet
+        for (let i = 0; i < keysSet.length; i++) {
+            callbackfn(super.get(keysSet[i]) as V, keysSet[i], this)
+        }
+    }
+
     getKeysSet(): readonly number[] {
         return this.keysSet
+    }
+
+    keys(): IterableIterator<number> {
+        return this.keysSet.values()
+    }
+
+    values(): IterableIterator<V> {
+        return this.keysSet.map(set => super.get(set) as V).values()
+    }
+
+    entries(): IterableIterator<[number, V]> {
+        return this.keysSet.map((set: number): [number, V] => [set, super.get(set) as V]).values()
+    }
+
+    clear(): void {
+        this.clearKeys();
+        super.clear()
     }
 
 }
