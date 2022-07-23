@@ -14,5 +14,4 @@
 
 const singleNonDuplicate = (nums: number[]): number => nums.reduce<number>((prev, curr) => prev ^ curr, 0)
 
-console.log(singleNonDuplicate([3, 3, 7, 7, 10, 11, 11]))
-console.log(singleNonDuplicate([1, 1, 2, 3, 3, 4, 4, 8, 8]))
+export default singleNonDuplicate

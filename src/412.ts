@@ -15,7 +15,4 @@ const fizzBuzz = (n: number): string[] => {
     return result
 }
 
-console.log(fizzBuzz(3))
-console.log(fizzBuzz(5))
-console.log(fizzBuzz(15))
-console.log(fizzBuzz(25))
+export default fizzBuzz

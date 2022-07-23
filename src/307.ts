@@ -86,7 +86,4 @@ class NumArray {
 
 }
 
-const na = new NumArray([1, 3, 5])
-console.log(na.sumRange(0, 2))
-na.update(1, 2)
-console.log(na.sumRange(0, 2))
+export default NumArray

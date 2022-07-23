@@ -31,14 +31,5 @@ class BrowserHistory {
     }
 }
 
-const bh = new BrowserHistory('leetcode.com')
-bh.visit('google.com')
-bh.visit('facebook.com')
-bh.visit('youtube.com')
-console.log(bh.back(1))
-console.log(bh.back(1))
-console.log(bh.forward(1))
-bh.visit('linkedin.com')
-console.log(bh.forward(2))
-console.log(bh.back(2))
-console.log(bh.back(7))
+
+export default BrowserHistory

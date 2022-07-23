@@ -28,4 +28,5 @@ const thirdMax = (nums: number[]): number => {
     }
 }
 
-console.log(thirdMax([2, 2, 3, 1]))
+
+export default thirdMax

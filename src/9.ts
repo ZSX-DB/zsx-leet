@@ -12,4 +12,4 @@ const isPalindrome = (x: number): boolean => {
     return x === rs || x === Math.floor(rs / 10)
 }
 
-console.log(isPalindrome(98789))
+export default isPalindrome

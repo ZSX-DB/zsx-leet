@@ -8,6 +8,5 @@ const letterCombinations = (digits: string): string[] => {
     return digits.length <= 1 ? record.get(digits) : getStrIN(record.get(digits[0]), letterCombinations(digits.substring(1)))
 }
 
-console.log(letterCombinations('2'))
-console.log(letterCombinations('23'))
-console.log(letterCombinations('234'))
+
+export default letterCombinations

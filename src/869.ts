@@ -13,5 +13,4 @@ const reorderedPowerOf2 = (n: number): boolean => {
     return false
 }
 
-console.log(reorderedPowerOf2(10))
-console.log(reorderedPowerOf2(46))
+export default reorderedPowerOf2

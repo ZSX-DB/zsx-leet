@@ -42,7 +42,4 @@ const integerReplacement = (n: number): number => {
 // }
 
 
-console.log(integerReplacement(9))
-console.log(integerReplacement(8))
-console.log(integerReplacement(7))
-console.log(integerReplacement(4))
+export default integerReplacement

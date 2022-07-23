@@ -50,4 +50,5 @@ const fourSum = (nums: number[], target: number): [number, number, number, numbe
     return result
 }
 
-console.log(fourSum([1, 0, -1, 0, -2, 2], 0))
+
+export default fourSum

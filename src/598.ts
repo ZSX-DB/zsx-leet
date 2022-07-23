@@ -25,5 +25,4 @@
 
 const maxCount = (m: number, n: number, ops: [number, number][]): number => ops.length ? Math.min(...ops.map(op => op[0])) * Math.min(...ops.map(op => op[1])) : m * n
 
-console.log(maxCount(3, 3, [[2, 2], [3, 3]]))
-console.log(maxCount(3, 3, []))
+export default maxCount

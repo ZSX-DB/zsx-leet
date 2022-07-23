@@ -31,7 +31,5 @@ const findLHS = (nums: number[]): number => {
     return max
 }
 
-console.log(findLHS([1, 3, 2, 2, 5, 2, 3, 7]))
-console.log(findLHS([1, 2, 3, 4]))
-console.log(findLHS([1, 1, 1, 1]))
-console.log(findLHS([1, 2, 2, 1]))
+
+export default findLHS

@@ -29,7 +29,5 @@ const findWords = (words: string[]): string[] =>
         return true
     })
 
-console.log(findWords(["Hello", "Alaska", "Dad", "Peace"]))
-console.log(findWords(["omk"]))
-console.log(findWords(["adsdf", "sfd"]))
+export default findWords
 

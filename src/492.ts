@@ -6,6 +6,4 @@ const constructRectangle = (area: number): [number, number] => {
     return [area / width, width]
 }
 
-console.log(constructRectangle(10))
-console.log(constructRectangle(9))
-console.log(constructRectangle(37))
+export default constructRectangle

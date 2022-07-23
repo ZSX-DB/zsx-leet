@@ -28,6 +28,4 @@ const search = (nums: number[], target: number): number => {
     return -1
 }
 
-console.log(search([6, 7, 8, 9, 10, 4, 5], 4))
-console.log(search([8, 9, 10, 4, 5, 6, 7], 9))
-console.log(search([4, 5, 6, 7, 1, 2, 3], 3))
+export default search

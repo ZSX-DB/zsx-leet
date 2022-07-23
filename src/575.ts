@@ -6,4 +6,4 @@
 
 const distributeCandies = (candyType: number[]): number => Math.min(candyType.length / 2, new Set(candyType).size)
 
-console.log(distributeCandies([1, 2, 3, 3]))
+export default distributeCandies

@@ -49,32 +49,4 @@ class Twitter {
     }
 }
 
-const t = new Twitter()
-// t.postTweet(1, 5)
-// console.log(t.getNewsFeed(1))
-// t.follow(1, 2)
-// t.postTweet(2, 6)
-// console.log(t.getNewsFeed(1))
-// t.unfollow(1, 2)
-// console.log(t.getNewsFeed(1))
-
-// t.postTweet(2, 5)
-// t.follow(1, 2)
-// t.follow(1, 2)
-// console.log(t.getNewsFeed(1))
-
-// t.postTweet(1, 4)
-// t.postTweet(2, 5)
-// t.unfollow(1, 2)
-// console.log(t.getNewsFeed(1))
-
-t.postTweet(1, 5)
-t.postTweet(1, 3)
-t.postTweet(1, 101)
-t.postTweet(1, 13)
-t.postTweet(1, 10)
-t.postTweet(1, 2)
-t.postTweet(1, 94)
-t.postTweet(1, 505)
-t.postTweet(1, 303)
-console.log(t.getNewsFeed(1))
+export default Twitter

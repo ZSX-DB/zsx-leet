@@ -61,8 +61,4 @@ const majorityElement = (nums: number[]): number[] => {
     return result
 }
 
-console.log(majorityElement([3, 2, 3]))
-console.log(majorityElement([1]))
-console.log(majorityElement([1, 1, 1, 3, 3, 2, 2, 2]))
-console.log(majorityElement([1, 1, 1, 1, 1, 1, 2, 2]))
-console.log(majorityElement([1, 2, 3]))
+export default majorityElement

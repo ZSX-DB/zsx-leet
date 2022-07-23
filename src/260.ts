@@ -16,6 +16,4 @@ const singleNumber = (nums: number[]): number[] => {
     return result
 }
 
-console.log(singleNumber([1, 2, 1, 3, 2, 5]))
-console.log(singleNumber([-1, 0]))
-console.log(singleNumber([0, 1]))
+export default singleNumber

@@ -33,4 +33,5 @@ const shoppingOffers = (price: number[], special: number[][], needs: number[]): 
     return dfs(needs, filterSpecial)
 }
 
-console.log(shoppingOffers([2, 5], [[3, 0, 5], [1, 2, 10]], [3, 2]))
+
+export default shoppingOffers

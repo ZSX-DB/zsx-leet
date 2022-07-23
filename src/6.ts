@@ -37,6 +37,6 @@ const convert = (s: string, numRows: number): string => {
     return result
 }
 
-console.log(convert('PAYPALISHIRING', 3))
+export default convert
 
 

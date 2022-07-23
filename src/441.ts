@@ -40,7 +40,4 @@ const arrangeCoins = (n: number): number => {
     return low - 1
 }
 
-console.log(arrangeCoins(5))
-console.log(arrangeCoins(8))
-console.log(arrangeCoins(10))
-console.log(arrangeCoins(1681692777))
+export default arrangeCoins

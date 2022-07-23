@@ -59,11 +59,7 @@ const longestPalindrome = (s: string): string => {
     return longestStr
 }
 
-console.log(longestPalindrome('caba'))
-console.log(longestPalindrome('zbgccccgbs'))
-console.log(longestPalindrome('babad'))
-console.log(longestPalindrome('cbbd'))
-console.log(longestPalindrome('ccc'))
-console.log(longestPalindrome('d'))
+
+export default longestPalindrome
 
 

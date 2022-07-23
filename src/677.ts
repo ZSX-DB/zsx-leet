@@ -53,11 +53,6 @@ class MapSum {
     }
 }
 
-const ms = new MapSum()
-ms.insert('apple', 3)
-console.log(ms.sum('ap'))
-ms.insert('app', 2)
-console.log(ms.sum('ap'))
-ms.insert('apple', 7)
-console.log(ms.sum('ap'))
+
+export default MapSum
 

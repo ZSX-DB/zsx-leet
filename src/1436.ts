@@ -7,5 +7,4 @@ const destCity = (paths: string[][]): string => {
     }
 }
 
-console.log(destCity([["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]]))
-console.log(destCity([["B", "C"], ["D", "B"], ["C", "A"]]))
+export default destCity
