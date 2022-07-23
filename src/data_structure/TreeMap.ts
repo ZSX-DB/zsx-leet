@@ -2,8 +2,11 @@ class TreeMap<V> extends Map<number, V> {
     // 保证 key 的唯一性
     private readonly keysSet: number[] = []
 
-    constructor() {
+    constructor(entries?: readonly (readonly [number, V])[] | null) {
         super()
+        for (const [key, value] of (entries ?? [])) {
+            this.set(key, value)
+        }
     }
 
     private insertKey(key: number): void {

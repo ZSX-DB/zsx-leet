@@ -1,10 +1,10 @@
 import TreeMap from "../data_structure/TreeMap";
 
-const map = new Map<number, string>()
-const treeMap = new TreeMap<string>()
+const map = new Map<number, string>([[1, "first"]])
+const treeMap = new TreeMap<string>([[5, "five"]])
 
-map.set(1, "first").set(3, "three").set(5, "five")
-treeMap.set(3, "three").set(1, "first").set(5, "five")
+map.set(3, "three").set(5, "five")
+treeMap.set(3, "three").set(1, "first")
 
 test("get", () => {
     [1, 3, 5, 7, 9].forEach(key => {
