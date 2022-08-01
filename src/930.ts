@@ -15,13 +15,13 @@
 // }
 
 const numSubarraysWithSum = (nums: (0 | 1)[], goal: number): number => {
-    const record = new Map<number, number>()
+    const record = new Map<number, number>([[0, 1]])
     let sum = 0
     let result = 0
     for (const num of nums) {
-        record.set(sum, (record.get(sum) ?? 0) + 1)
         sum += num
         result += (record.get(sum - goal) ?? 0)
+        record.set(sum, (record.get(sum) ?? 0) + 1)
     }
     return result
 }
