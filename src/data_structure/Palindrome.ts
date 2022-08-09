@@ -1,5 +1,5 @@
 class Palindrome {
-    static detect(s: string): boolean {
+    static is(s: string): boolean {
         let i = 0
         let j = s.length - 1
         while (i < j) {
