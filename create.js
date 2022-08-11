@@ -67,6 +67,7 @@ if (isFn) {
     expect(${exportName}()).${toFn}()`
 }
 const testTemplate = `import ${exportName} from '../${serial}';
+
 test("${serial}", () => {
     ${expectTemplate}
 })
