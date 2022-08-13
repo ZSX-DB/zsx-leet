@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "typescript": "^4.6.3"
+  },
+  "bin": {
+    "create": "./create.js"
   }
 }
