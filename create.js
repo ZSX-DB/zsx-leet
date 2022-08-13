@@ -57,7 +57,10 @@ const mainTemplate = isFn ?
 
 export default ${exportName}
 ` :
-    code;
+    `${code}
+
+export default ${exportName}    
+`;
 
 /** 测试文件模板 */
 let expectTemplate = '';
