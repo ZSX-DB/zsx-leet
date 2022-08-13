@@ -1,44 +1,30 @@
-type ArrayItems<T> = T[][]
-
-const detectArrayList = <T>(arrayItems1: ArrayItems<T>, arrayItems2: ArrayItems<T>): boolean => {
-    if (arrayItems1.length !== arrayItems2.length) {
-        return false
-    }
-    const items = arrayItems1.map(arrayItem => ({
-        value: arrayItem.toString(),
-        match: false
-    }))
-    for (const arrayItem of arrayItems2) {
-        const idx: number = items.findIndex(item => item.value === arrayItem.toString() && item.match === false)
-        if (idx === -1) {
-            return false
-        } else {
-            items[idx].match = true
-        }
-    }
-    return true
+interface CheckItem {
+    value: string
+    match: boolean
 }
 
-const detectStringList = (stringItems1: string[], stringItems2: string[]) => {
-    if (stringItems1.length !== stringItems2.length) {
+/**
+ * 适用于答案为数组，但顺序不固定的题目
+ * @param items1
+ * @param items2
+ * @returns
+ */
+const detectItems = <T>(items1: T[], items2: T[]): boolean => {
+    if (items1.length !== items2.length) {
         return false
     }
-    const items = stringItems1.map(stringItem => ({
-        value: stringItem,
-        match: false
-    }))
-    for (const stringItem of stringItems2) {
-        const idx: number = items.findIndex(item => item.value === stringItem && item.match === false)
+    const checkItems: CheckItem[] = items1.map(item => ({value: String(item), match: false}))
+    for (const item of items2) {
+        const idx: number = checkItems.findIndex(checkItem => checkItem.value === String(item) && checkItem.match === false)
         if (idx === -1) {
             return false
         } else {
-            items[idx].match = true
+            checkItems[idx].match = true
         }
     }
     return true
 }
 
 export {
-    detectArrayList,
-    detectStringList
+    detectItems
 }

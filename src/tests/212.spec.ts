@@ -1,8 +1,8 @@
 import findWords from "../212";
-import {detectStringList} from "../utils/detect";
+import {detectItems} from "../utils/detect";
 
 test("212", () => {
-    expect(detectStringList(
+    expect(detectItems<string>(
         findWords([
             ["o", "a", "a", "n"],
             ["e", "t", "a", "e"],
@@ -11,14 +11,14 @@ test("212", () => {
         ], ["oath", "pea", "eat", "rain", "aea"]),
         ['oath', 'eat']
     )).toBeTruthy()
-    expect(detectStringList(
+    expect(detectItems<string>(
         findWords([
             ["a", "b"],
             ["c", "d"]
         ], ["aaaaa"]),
         []
     )).toBeTruthy()
-    expect(detectStringList(
+    expect(detectItems<string>(
         findWords([
             ["o", "a", "b", "n"],
             ["o", "t", "a", "e"],
@@ -27,14 +27,14 @@ test("212", () => {
         ], ["oa", "oaa"]),
         ["oa", "oaa"]
     )).toBeTruthy()
-    expect(detectStringList(
+    expect(detectItems<string>(
         findWords([
             ["a", "a"],
             ["a", "a"]
         ], ["aaaaa"]),
         []
     )).toBeTruthy()
-    expect(detectStringList(
+    expect(detectItems<string>(
         findWords([
             ["a", "b", "c"],
             ["a", "e", "d"],

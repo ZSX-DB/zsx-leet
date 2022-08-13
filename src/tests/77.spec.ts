@@ -1,9 +1,9 @@
 import combine from "../77";
-import {detectArrayList} from "../utils/detect";
+import {detectItems} from "../utils/detect";
 
 test("77", () => {
     expect(
-        detectArrayList<number>(
+        detectItems<number[]>(
             combine(4, 2),
             [
                 [1, 2],
