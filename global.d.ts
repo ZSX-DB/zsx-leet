@@ -47,3 +47,6 @@ declare class NestedInteger {
 
 
 declare type MathSign = '+' | '-' | '*' | '/'
+
+
+declare type Index = number
