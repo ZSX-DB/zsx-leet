@@ -1,5 +1,5 @@
-import Letters from "./data_structure/Letters"
+import LetterUtils from "./data_structure/LetterUtils";
 
-const detectCapitalUse = (word: string): boolean => Letters.isLowerWord(word) || Letters.isUpperWord(word) || Letters.isTitleWord(word)
+const detectCapitalUse = (word: string): boolean => LetterUtils.isLowerWord(word) || LetterUtils.isUpperWord(word) || LetterUtils.isTitleWord(word)
 
 export default detectCapitalUse
