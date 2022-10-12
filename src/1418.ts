@@ -2,7 +2,7 @@ const displayTable = (orders: [string, string, string][]): string[][] => {
     const tables: string[] = []
     const menu: string[] = []
     const record = new Map<string, number[]>()
-    const memo = new Map<string, Index>()
+    const memo = new Map<string, number>()
     const tableInfo: string[][] = []
     orders.forEach(([_, tableNumber, foodItem]) => {
         if (tables.includes(tableNumber) === false) {

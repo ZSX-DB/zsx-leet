@@ -49,9 +49,6 @@ declare class NestedInteger {
 declare type MathSign = '+' | '-' | '*' | '/'
 
 
-declare type Index = number
-
-
 declare class Employee {
     id: number
     importance: number
