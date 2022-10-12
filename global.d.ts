@@ -50,3 +50,16 @@ declare type MathSign = '+' | '-' | '*' | '/'
 
 
 declare type Index = number
+
+
+declare class Employee {
+    id: number
+    importance: number
+    subordinates: number[]
+    constructor(id: number, importance: number, subordinates: number[]) {
+        this.id = (id === undefined) ? 0 : id;
+        this.importance = (importance === undefined) ? 0 : importance;
+        this.subordinates = (subordinates === undefined) ? [] : subordinates;
+    }
+}
+
