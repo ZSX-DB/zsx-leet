@@ -49,6 +49,9 @@ declare class NestedInteger {
 declare type MathSign = '+' | '-' | '*' | '/'
 
 
+declare type Coordinate = [number, number]
+
+
 declare class Employee {
     id: number
     importance: number
