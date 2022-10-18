@@ -9,13 +9,13 @@
 // }
 
 // 递归转迭代
-const climbStairs = (n: number): number => {
-    const record: number[] = [0, 1, 2]
-    for (let i = 3; i <= n; i++) {
-        record.push(record[i - 1] + record[i - 2])
-    }
-    return record[n]
-}
+// const climbStairs = (n: number): number => {
+//     const record: number[] = [0, 1, 2]
+//     for (let i = 3; i <= n; i++) {
+//         record.push(record[i - 1] + record[i - 2])
+//     }
+//     return record[n]
+// }
 
 // const climbStairs = (n: number): number => {
 //     const memo: Map<number, number> = new Map<number, number>([[1, 1], [2, 2]])
@@ -30,3 +30,19 @@ const climbStairs = (n: number): number => {
 //     }
 //     return helper(n)
 // }
+
+// 转化成 01 背包问题
+const climbStairs = (n: number): number => {
+    const dp = Array(n + 1).fill(0)
+    const steps = [1, 2]
+    dp[0] = 1
+    for (let i = 1; i <= n; i++) {
+        steps.forEach(step => {
+            dp[i] += dp[i - step] ?? 0
+        })
+    }
+    return dp[n]
+}
+
+
+export default climbStairs
