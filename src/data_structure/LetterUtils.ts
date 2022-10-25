@@ -7,6 +7,10 @@ class LetterUtils {
 
     static readonly uppercaseSet: Set<string> = new Set<string>(Array.from(Array(26)).map((_, i) => String.fromCharCode(i + 65)))
 
+    static isLetter(char: string): boolean {
+        return this.lowercaseSet.has(char) || this.uppercaseSet.has(char)
+    }
+
     static isLower(char: string): boolean {
         return this.lowercaseSet.has(char)
     }
