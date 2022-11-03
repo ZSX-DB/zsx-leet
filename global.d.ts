@@ -5,7 +5,6 @@ declare class ListNode {
     constructor(val?: number, next?: ListNode | null);
 }
 
-
 declare class TreeNode {
     val: number;
     left: TreeNode | null;
@@ -13,7 +12,6 @@ declare class TreeNode {
 
     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null);
 }
-
 
 declare class Node {
     val: number
@@ -25,11 +23,9 @@ declare class Node {
     }
 }
 
-
 declare type TrieRoot = {
     [key in string]: TrieRoot;
 }
-
 
 declare class NestedInteger {
     constructor(value?: number);
@@ -45,12 +41,9 @@ declare class NestedInteger {
     getList(): NestedInteger[];
 }
 
-
 declare type MathSign = '+' | '-' | '*' | '/'
 
-
 declare type Coordinate = [number, number]
-
 
 declare class Employee {
     id: number
@@ -63,3 +56,10 @@ declare class Employee {
     }
 }
 
+declare type Tree = number | null
+
+declare type Trees = Tree[]
+
+declare type NarrowingBinaryTree<T extends Trees> = T extends never[] ? null : TreeNode
+
+declare type NarrowingLinkedList<T extends number[]> = T extends never[] ? null : ListNode

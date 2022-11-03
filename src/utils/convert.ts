@@ -1,10 +1,6 @@
-type Tree = number | null
-
-type Trees = Tree[]
-
-const toBinaryTree = (trees: Trees): TreeNode | null => {
+const toBinaryTree = <T extends Trees>(trees: T): NarrowingBinaryTree<T> => {
     if (trees.length === 0) {
-        return null
+        return null as NarrowingBinaryTree<T>
     }
     // 根据二维数组反向构建二叉树
     const items: Trees[] = [[trees.shift() as Tree]]
@@ -36,23 +32,27 @@ const toBinaryTree = (trees: Trees): TreeNode | null => {
             }))
         }
     }
-    return container[container.length - 1][0]
+    return container[container.length - 1][0] as NarrowingBinaryTree<T>
 }
 
-const toLinkedList = (list: number[]): ListNode | null => {
-    const len: number = list.length
-    if (len === 0) {
-        return null
+const toLinkedList = <T extends number[]>(list: T, last?: ListNode): NarrowingLinkedList<T> => {
+    const n: number = list.length
+    if (n === 0) {
+        return null as NarrowingLinkedList<T>
     }
     const initListNode: ListNode = { val: -1, next: null }
-    const result: ListNode = { ...initListNode }
-    let temp: ListNode | null = result
-    for (let i = 0; i < list.length; i++) {
+    const ret: ListNode = { ...initListNode }
+    let temp: ListNode = ret
+    for (let i = 0; i < n; i++) {
         temp.val = list[i]
-        temp.next = (i !== len - 1) ? { ...initListNode } : null
-        temp = temp.next
+        if (i !== n - 1) {
+            temp.next = { ...initListNode }
+            temp = temp.next
+        } else {
+            temp.next = last ?? null
+        }
     }
-    return result
+    return ret as NarrowingLinkedList<T>
 }
 
 export {
