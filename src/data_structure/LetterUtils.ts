@@ -38,6 +38,11 @@ class LetterUtils {
         }
         return word.split('').slice(1).every(char => this.lowercaseSet.has(char))
     }
+
+    static getASCII = (char: string): number => char.charCodeAt(0)
+
+    static getCharByASCII = (code: number): string => String.fromCharCode(code)
+
 }
 
 export default LetterUtils
