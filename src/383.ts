@@ -1,4 +1,4 @@
-import count from "./data_structure/count";
+import count from "./utils/count";
 
 const canConstruct = (ransomNote: string, magazine: string): boolean => {
     const record = count(magazine)

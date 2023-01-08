@@ -1,4 +1,4 @@
-import count from "./data_structure/count"
+import count from "./utils/count"
 
 const findErrorNums = (nums: number[]): number[] => {
     let duplicate = -1

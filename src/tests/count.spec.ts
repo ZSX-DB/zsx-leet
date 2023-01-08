@@ -1,4 +1,4 @@
-import count from "../data_structure/count";
+import count from "../utils/count";
 
 test("count", () => {
     expect(count([3, 3, 2, 1])).toEqual(new Map<number, number>([[1, 1], [2, 1], [3, 2]]))

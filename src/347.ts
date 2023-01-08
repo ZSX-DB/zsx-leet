@@ -1,4 +1,4 @@
-import count from "./data_structure/count";
+import count from "./utils/count";
 import Heap from "./data_structure/Heap";
 
 const topKFrequent = (nums: number[], k: number): number[] => {

@@ -1,4 +1,4 @@
-import count from "./data_structure/count"
+import count from "./utils/count"
 
 const leastBricks = (wall: number[][]): number => {
     const items: number[] = []

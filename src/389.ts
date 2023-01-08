@@ -1,4 +1,4 @@
-import count from "./data_structure/count";
+import count from "./utils/count";
 import LetterUtils from "./data_structure/LetterUtils";
 
 // const findTheDifference = (s: string, t: string): string => {
